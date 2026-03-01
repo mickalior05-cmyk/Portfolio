@@ -30,50 +30,35 @@ body{
 }
 
 @media(max-width:995px){
-.menu-icon {
-        display: block;
-        font-size: 3rem;
-        color: white;
-        cursor: pointer;
-        z-index: 1001;
+    nav{
+        position:absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-right: 3px solid rgba(154, 154, 158, 0.421);
+        border-bottom: 3px solid rgba(5, 5, 140, 0.548);
+        border-bottom-right-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
 }
 
-@media(max-width:995px){
-    
-    nav {
-        position: fixed;
-        top: 0;
-        left: -100%; 
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.95);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.5s ease;
-        z-index: 1000;
-    }
-    
-    .menu-btn {
-        display: block;
-        font-size: 3rem;
-        color: white;
-        cursor: pointer;
-        position: fixed;
-        top: 2rem;
-        right: 2rem;
-        z-index: 1001;
-    }
-    
-    #check:checked ~ nav {
-        left: 0;
-    }
+/*Navbar*/
+nav{
+    display:flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
 }
-@media(min-width: 996px) {
-    .menu-icon, #menu-bar {
-        display: none;
-    }
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
 }
 
 nav a:hover{
@@ -200,6 +185,4 @@ ul{
  .main-content ul li a:hover {
     color: #66b2ff;
     text-decoration: underline;
-
  }
-
